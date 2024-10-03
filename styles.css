@@ -1,0 +1,330 @@
+/*-------------------- CSS RESET ---------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root{
+	--aqua: #007d7b;
+	--black: #000000;
+	--white: #ffffff;
+}
+
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and (min-width: 485px){
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: var(--black);
+    box-sizing: border-box;
+	font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+h2{
+    font-size: 2em;
+    padding: 20px;
+    text-align: center;
+}
+
+p{
+    font-size: 1.25em;
+}
+
+#about #gallery p {
+    padding: 50px;
+}
+
+
+/* Header & Nav
+------------------------------------*/
+header{
+    color: var(--aqua);
+    background-color: var(--white);
+    text-align: center;
+    width: 100%;
+    text-wrap: nowrap;
+    
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    padding: 1rem;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white; 
+    width: 100%;
+    max-width: 1400px; /* Adjust the max-width to your preference */
+    box-sizing: border-box;
+    margin: 0px 50px; /* Optional: add margin for spacing around the content */
+}
+
+.back-to-top {
+    position: fixed; 
+    bottom: 20px;   
+    right: 20px;   
+    padding: 10px 15px; 
+    background-color: var(--aqua); 
+    color: var(--white);       
+    text-decoration: none; 
+    border-radius: 10px;   
+    display: none;         /* Initially hidden */
+    z-index: 1000;        
+}
+
+
+/* Figures and Images
+------------------------------------*/
+#about p, #gallery p {
+    margin-left: 15px;
+}
+
+figure {
+    position: relative;
+    display: inline-block;
+	padding: 5px;
+    margin: 5px;
+}
+
+.bottom-white  {
+    position: absolute;
+    bottom: 1%;
+    left: 45%;
+    transform: translateX(-50%);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+    font-size: 1em;
+}
+
+.bottom-black  {
+    position: absolute;
+    bottom: 1%;
+    left: 45%;
+    transform: translateX(-50%);
+    color: var(--black);
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+    font-size: 1em;
+}
+
+.top-white  {
+    position: absolute;
+    top: 1%;
+    left: 45%;
+    transform: translateX(-50%);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+    font-size: 1em;
+}
+
+.top-black  {
+    position: absolute;
+    top: 1%;
+    left: 45%;
+    transform: translateX(-50%);
+    color: var(--black);
+    padding: 10px;
+    text-align: center;
+    text-wrap: nowrap;
+    width: 40%;
+    font-size: 1em;
+}
+
+
+/* Contact
+------------------------------------*/
+#contact {
+    background-color: var(--black);
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#contact h2 {
+    padding-top: 1px;
+}
+
+#contact p {
+    text-align: center;
+}
+
+#contact form {
+    line-height: 1.2;
+    font-size: 1rem;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#contact label {
+    text-align: left;
+    margin-left: 10px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="message"],
+#contact textarea {
+    width: 440px;
+    max-width: 900px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact textarea {
+    height: 1em;
+}
+
+.row input::placeholder {
+    color: var(--aqua);
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+textarea::placeholder{
+    color: var(--aqua);
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+form div {
+    margin-bottom: 1.5rem;
+}   
+
+label, textarea {
+    display: block;
+    font-size: 1em;
+    color: var(--white);
+}
+
+fieldset > label:last-of-type {
+    margin-bottom: 1rem;
+}
+
+#contact button {
+    background-color: var(--aqua);
+    color: var(--white);
+    border: none;
+    padding: 8px 150px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    align-self: center;
+    font-weight: bold;
+}
+
+/* Footer
+------------------------------------*/
+footer {
+    font-size: 1em;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+}
+
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 880px) {
+    nav {justify-content: center;}
+    h1 {font-size: 3em;
+        text-align: left;}
+}  
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 1300px) {
+    nav {justify-content: right;}
+    h1 {font-size: 3em;
+        text-align: left;}
+}
+
